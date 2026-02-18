@@ -1,0 +1,60 @@
+\definecolor{r1}{RGB}{86,16,16};
+\definecolor{r2}{RGB}{151,28,28};
+\definecolor{r3}{RGB}{214,39,40};
+\definecolor{r4}{RGB}{227,104,104};
+\definecolor{r5}{RGB}{239,169,169};
+\definecolor{b1}{RGB}{11,43,65};
+\definecolor{b2}{RGB}{22,86,131};
+\definecolor{b3}{RGB}{31,119,180};
+\definecolor{b4}{RGB}{59,154,222};
+\definecolor{b5}{RGB}{124,188,233};
+\definecolor{g1}{RGB}{16,60,16};
+\definecolor{g2}{RGB}{33,120,33};
+\definecolor{g3}{RGB}{49,180,49};
+\definecolor{g4}{RGB}{95,211,95};
+\definecolor{g5}{RGB}{135,222,135};
+\definecolor{p1}{RGB}{39,23,53};
+\definecolor{p2}{RGB}{77,47,106};
+\definecolor{p3}{RGB}{116,70,160};
+\definecolor{p4}{RGB}{148,103,189};
+\definecolor{p5}{RGB}{179,149,208};
+\definecolor{tab_orange}{RGB}{255,127,14};
+\definecolor{tab_blue}{RGB}{31, 119, 180};
+\definecolor{tab_red}{RGB}{214, 39, 40};
+\definecolor{mixed_color}{RGB}{143, 123, 97}
+\definecolor{tab_brown}{RGB}{140,86,75};
+
+\begin{tikzpicture}
+
+\node[inner sep=0pt] (russell) at (3.5,11.5) {\includegraphics[width=0.25\textwidth]{fig3.1.pdf}};
+
+
+
+
+\node [rotate=-90] at (3.9,10.6) {{\fontfamily{phv}\scalebox{1}{\fontsize{4pt}{0pt}\selectfont{Default threshold}}}};
+
+\node [] at (5.7,11.6) {{
+\fontfamily{phv}\scalebox{1}{
+\parbox{3cm}{
+\fontsize{4pt}{0pt}\selectfont
+More conservative\\
+(↓ Sens., ↑ Spec.)
+}}}};
+
+
+\node [] at (3.5,11.6) {{
+\fontfamily{phv}\scalebox{1}{
+\parbox{3cm}{
+\fontsize{4pt}{0pt}\selectfont
+More inclusive\\
+(↑ Sens., ↓ Spec.)
+}}}};
+
+
+\node [inner sep=0pt] (v1) at (3.9,11.6) {};
+\node [inner sep=0pt] (v2) at (4.2,11.6) {};
+\draw [->]  (v1) edge (v2);
+\node [inner sep=0pt] (v3) at (3.68,11.6) {};
+\node [inner sep=0pt] (v4) at (3.4,11.6) {};
+\draw [->]  (v3) edge (v4);
+\end{tikzpicture}

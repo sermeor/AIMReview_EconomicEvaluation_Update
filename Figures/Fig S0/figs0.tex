@@ -1,0 +1,693 @@
+\definecolor{r1}{RGB}{86,16,16};
+\definecolor{r2}{RGB}{151,28,28};
+\definecolor{r3}{RGB}{214,39,40};
+\definecolor{r4}{RGB}{227,104,104};
+\definecolor{r5}{RGB}{239,169,169};
+\definecolor{b1}{RGB}{11,43,65};
+\definecolor{b2}{RGB}{22,86,131};
+\definecolor{b3}{RGB}{31,119,180};
+\definecolor{b4}{RGB}{59,154,222};
+\definecolor{b5}{RGB}{124,188,233};
+\definecolor{g1}{RGB}{16,60,16};
+\definecolor{g2}{RGB}{33,120,33};
+\definecolor{g3}{RGB}{49,180,49};
+\definecolor{g4}{RGB}{95,211,95};
+\definecolor{g5}{RGB}{135,222,135};
+\definecolor{p1}{RGB}{39,23,53};
+\definecolor{p2}{RGB}{77,47,106};
+\definecolor{p3}{RGB}{116,70,160};
+\definecolor{p4}{RGB}{148,103,189};
+\definecolor{p5}{RGB}{179,149,208};
+\definecolor{tab_orange}{RGB}{255,127,14};
+\definecolor{tab_blue}{RGB}{31, 119, 180};
+\definecolor{mixed_color}{RGB}{143, 123, 97}
+\definecolor{tab_brown}{RGB}{140,86,75};
+
+\begin{tikzpicture}
+
+
+
+
+\node at (0.3,13.1) {{\fontfamily{phv}\scalebox{1}{\fontsize{5pt}{0pt}\selectfont{A}}}};
+\node at (2.9,13.1) {{\fontfamily{phv}\scalebox{1}{\fontsize{5pt}{0pt}\selectfont \parbox{4cm} {
+Fusion of features
+}}}};
+
+
+\node at (0.3,9.1) {{\fontfamily{phv}\scalebox{1}{\fontsize{5pt}{0pt}\selectfont{B}}}};
+\node at (3,9.1) {{\fontfamily{phv}\scalebox{1}{\fontsize{5pt}{0pt}\selectfont \parbox{4cm} {
+Stacked generalization
+}}}};
+
+\node[inner sep=0pt] (russell) at (0.9,12.1) {\includegraphics[width=0.03\textwidth]{files2.png}};
+\node at (2.6,12.5) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont \parbox{4cm} {
+Documents
+}}}};
+
+
+
+
+
+\node [rotate = -90] at (1.1,11.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Text vectorization
+}}}};
+
+
+
+
+
+
+
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (0.9,11.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (0.9,10.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\node [outer sep=0,inner sep=0,minimum size=0] (v11) at (1.6,10.7) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v12) at (1.7,10.7) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v13) at (1.7,10.25) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v14) at (1.8,10.15) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v15) at (1.7,10.05) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v16) at (1.7,9.6) {};
+\node [outer sep=0,inner sep=0,minimum size=0] (v17) at (1.6,9.6) {};
+\draw [line width = 0.1mm]  (v11) edge (v12);
+\draw [line width = 0.1mm]  (v12) edge (v13);
+\draw [line width = 0.1mm]  (v13) edge (v14);
+\draw [line width = 0.1mm]  (v14) edge (v15);
+\draw [line width = 0.1mm]  (v15) edge (v16);
+\draw [line width = 0.1mm]  (v16) edge (v17);
+
+
+
+
+
+
+
+
+
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.3,10.7) rectangle (1.5,10.5);
+\fill  [g3, opacity=0.25, rounded corners=1pt]  (0.3,10.7) rectangle (1.5,10.5);
+\node at (0.9,10.6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{TF-IDF}}}};
+
+
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.3,10.4) rectangle (1.5,10.2);
+\fill  [r3, opacity=0.25, rounded corners=1pt]  (0.3,10.4) rectangle (1.5,10.2);
+\node at (0.9,9.7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Snowflake BERT}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.3,10.1) rectangle (1.5,9.9);
+\fill  [tab_orange, opacity=0.25, rounded corners=1pt]  (0.3,10.1) rectangle (1.5,9.9);
+\node at (0.9,10.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{LSA}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.3,9.8) rectangle (1.5,9.6);
+\fill  [b3, opacity=0.25, rounded corners=1pt]  (0.3,9.8) rectangle (1.5,9.6);
+\node at (0.9,10) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{SciBERT}}}};
+
+
+
+\node  at (2.3,9.7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Fusion of features
+}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (1.9,10.25) rectangle (4.4,10.05);
+\fill  [r3, opacity=0.25]  (2.5,10.25) rectangle (2.9,10.05);
+\fill  [g3, opacity=0.25]  (1.9,10.25) rectangle (2.5,10.05);
+\fill  [tab_orange, opacity=0.25]  (2.9,10.25) rectangle (3.5,10.05);
+
+\fill  [b3, opacity=0.25, rounded corners=1pt]  (3.5,10.25) rectangle (4.4,10.05);
+\node at (3.2,10.15) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{SciBERT}}}};
+\node at (2.2,10.15) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{TF-IDF}}}};
+\node at (2.7,10.15) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{LSA}}}};
+\node at (3.96,10.15) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Snowflake BERT}}}};
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.14,10.4) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.14,11) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.84,11.3) rectangle (3.44,11);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (2.84,11.3) rectangle (3.44,11);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.14,11.3) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.14,11.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+\node at (3.04,11.1) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Model}}}};
+
+\node[inner sep=0pt] (russell) at (3.34,11.2) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+
+
+\node[inner sep=0pt] (russell) at (2.84,12) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.44,12) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.04,12) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.24,12) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (2.84,12) {\includegraphics[width=0.005\textwidth]{red_tick.png}};
+\node[inner sep=0pt] (russell) at (3.44,12) {\includegraphics[width=0.005\textwidth]{green_tick.png}};
+\node[inner sep=0pt] (russell) at (3.04,12) {\includegraphics[width=0.005\textwidth]{red_tick.png}};
+\node[inner sep=0pt] (russell) at (3.24,12) {\includegraphics[width=0.005\textwidth]{green_tick.png}};
+\node  at (3.04,12.2) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Predictions
+}}}};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\node[inner sep=0pt] (russell) at (0.7,8.1) {\includegraphics[width=0.03\textwidth]{files2.png}};
+\node at (1.4,8.5) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont \parbox{2cm} {
+Documents
+}}}};
+
+
+
+
+
+\node [rotate = -90] at (0.9,7.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Text vectorization
+}}}};
+
+
+
+
+
+
+
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (0.7,7.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (0.7,6.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.2,6.7) rectangle (1.3,6.5);
+\fill  [g3, opacity=0.25, rounded corners=1pt]  (0.2,6.7) rectangle (1.3,6.5);
+\node at (0.8,6.6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{TF-IDF}}}};
+
+
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.2,6.4) rectangle (1.3,6.2);
+\fill  [r3, opacity=0.25, rounded corners=1pt]  (0.2,6.4) rectangle (1.3,6.2);
+\node at (0.8,6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{SciBERT}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.2,6.1) rectangle (1.3,5.9);
+\fill  [tab_orange, opacity=0.25, rounded corners=1pt]  (0.2,6.1) rectangle (1.3,5.9);
+\node at (0.8,5.7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Snowflake BERT}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (0.2,5.8) rectangle (1.3,5.6);
+\fill  [b3, opacity=0.25, rounded corners=1pt]  (0.2,5.8) rectangle (1.3,5.6);
+\node at (0.8,6.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{LSA}}}};
+
+
+\node [] at (4.1,7.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Stacking
+}}}};
+
+
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (1.3,6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.1,6) {};
+\draw  [ line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (1.3,5.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.1,5.7) {};
+\draw  [ line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (1.3,6.3) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.1,6.3) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (1.3,6.6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.1,6.6) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.6,6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.6,6.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (4,5.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (4,6.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.2,6.3) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.2,6.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (2.8,6.6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.8,6.8) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (2.8,6.6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.7,6.6) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.6,6) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.7,6) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (4,5.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.7,5.7) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.2,6.3) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (2.7,6.3) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.1,6.7) rectangle (2.7,6.5);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (2.1,6.7) rectangle (2.7,6.5);
+\node at (2.33,6.6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Model 1}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.1,6.1) rectangle (2.7,5.9);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (2.1,6.1) rectangle (2.7,5.9);
+\node at (2.33,6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Model 3}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.1,6.4) rectangle (2.7,6.2);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (2.1,6.4) rectangle (2.7,6.2);
+\node at (2.33,6.3) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Model 2}}}};
+
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.1,5.8) rectangle (2.7,5.6);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (2.1,5.8) rectangle (2.7,5.6);
+\node at (2.33,5.7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Model 4}}}};
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.4,7.7) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.4,8.1) {};
+\draw  [->, line width = 0.25mm, tab_blue](v1) edge (v2);
+
+
+\node[inner sep=0pt] (russell) at (2.6,6.3) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+\node[inner sep=0pt] (russell) at (2.6,6) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+\node[inner sep=0pt] (russell) at (2.6,6.6) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+\node[inner sep=0pt] (russell) at (3.7,7.6) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+\node[inner sep=0pt] (russell) at (2.6,5.7) {\includegraphics[width=0.005\textwidth]{chip.pdf}};
+
+\node[inner sep=0pt] (russell) at (3.1,8.3) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.7,8.3) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.3,8.3) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.5,8.3) {\includegraphics[width=0.01\textwidth]{doc.png}};
+\node[inner sep=0pt] (russell) at (3.1,8.3) {\includegraphics[width=0.005\textwidth]{red_tick.png}};
+\node[inner sep=0pt] (russell) at (3.7,8.3) {\includegraphics[width=0.005\textwidth]{green_tick.png}};
+\node[inner sep=0pt] (russell) at (3.3,8.3) {\includegraphics[width=0.005\textwidth]{red_tick.png}};
+\node[inner sep=0pt] (russell) at (3.5,8.3) {\includegraphics[width=0.005\textwidth]{green_tick.png}};
+\node  at (3.3,8.5) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont {
+Predictions
+}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (3,7.7) rectangle (3.8,7.5);
+\fill  [mixed_color, opacity = 0.25, rounded corners=1pt]  (3,7.7) rectangle (3.8,7.5);
+\node at (3.3,7.6) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{Meta model}}}};
+
+\draw  [line width = 0.1mm, rounded corners=1pt]  (2.6,7.1) rectangle (4.2,6.9);
+\fill  [r3, opacity=0.25]  (3,7.1) rectangle (3.4,6.9);
+\fill  [g3, opacity=0.25]  (2.6,7.1) rectangle (3,6.9);
+\fill  [tab_orange, opacity=0.25]  (3.4,7.1) rectangle (3.8,6.9);
+\fill  [b3, opacity=0.25]  (3.8,7.1) rectangle (4.2,6.9);
+\node at (3.6,7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{S3}}}};
+\node at (2.8,7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{S1}}}};
+\node at (3.2,7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{S2}}}};
+\node at (4,7) {{\fontfamily{phv}\scalebox{1}{\fontsize{3pt}{0pt}\selectfont{S4}}}};
+
+
+
+\node  [outer sep=0,inner sep=0,minimum size=0] (v1) at (3.4,7.2) {};
+\node  [outer sep=0,inner sep=0,minimum size=0] (v2) at (3.4,7.5) {};
+\draw  [line width = 0.25mm, tab_blue](v1) edge (v2);
+
+\node at (1.7,6.7) {{\fontfamily{phv}\scalebox{1}{\fontsize{2.5pt}{0pt}\selectfont{Vectors}}}};
+\node at (3.6,5.8) {{\fontfamily{phv}\scalebox{1}{\fontsize{2.5pt}{0pt}\selectfont{Decision scores}}}};
+
+
+
+
+
+\end{tikzpicture}
